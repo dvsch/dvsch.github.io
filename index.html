@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<!-- maybe add gradient over vid -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- ICONS -->
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+  <!-- ICONS -->
+</head>
+
+<body>
+  <!-- INTRO SECTION -->
+  <div class="loadingScreen" id="load">
+    <h2 id="loadText">LOADING</h2>
+    <video src="intro.mp4" muted autoplay id="intro"></video>
+    <img src="signature.png" alt="Denis Schedrin" id="introText">
+  </div>
+
+  <!-- BACKGROUND SECTION -->
+  <video src="background.mp4" muted loop autoplay></video>
+  <script src="script.js"></script>
+
+
+  <!--------------NAV SECTION---------------->
+  <input type="checkbox" id="nav">
+  <label for="nav">
+    <i class="gg-menu" id="open"></i>
+    <i class="gg-close" id="close"></i>
+    <div id="close2"></div>
+  </label>
+  <div class="navBg"> </div>
+  <nav>
+    <a href="#abt">about me</a>
+    <a href="#skill">skills</a>
+    <a href="#gal">extras</a>
+  </nav>
+
+
+    <!--------------HEADER SECTION---------------->
+    <header>
+      <h1>My Portfolio</h1>
+    </header>
+
+
+    <!--------------MAIN SECTION---------------->
+    <main>
+      <div class="aboutMeSection">
+        <div class="title">
+          <h3 id="abt">ABOUT ME</h3>
+        </div>
+        <p>
+          I'm a super humble tech trillionare playboy philantrophist and international spy.<br>
+          my hobbies range from curing cancer to inventing sustainable alternatives to the internal combustion engine in my free time.<br>
+          aside from inovating the future of the world you can catch me either pumping my gigantic muscles or advocating for the people with my high connections.
+        </p>
+      </div>
+
+      <div class="skillSection">
+        <div class="title">
+          <h3 id="skill">SKILLS</h3>
+        </div>
+        <ul>
+          <li>
+            <h4>HTML</h4>
+          </li>
+
+          <li>
+            <h4>CSS</h4>
+          </li>
+          <!-- add a vertical line hopefully like a progression line that animates when you scroll to it, DVW does this with border line right -->
+          <li>
+            <h4>JAVA</h4>
+          </li>
+
+          <li>
+            <h4>PYTHON</h4>
+          </li>
+
+          <li>
+            <h4>SWIFT</h4>
+          </li>
+
+          <li>
+            <h4>LUA</h4>
+          </li>
+        </ul>
+      </div>
+
+      <div class="gallerySection">
+        <div class="title">
+          <h3 id="gal">EXTRAS</h3>
+        </div>
+      </div>
+
+      <div class="gallerySection" id = "gal1">
+        <div class="title">
+          <h4>ACADEMICS</h4>
+        </div>
+        <p> MASS ART SCHOLARSHIP <br><br> 3.8 GPA <br><br> CRLS CREW <br><br> KSS CODING CLUB CO-PRESIDENT <br><br> CRLS IT CLUB CEO </p>
+        <!-- <video src="background2.mp4" muted autoplay loop id="gal1vid"></video> NOT ENOUGH TIME TO IMPLEMENT :( -->
+      </div>
+
+      <div class="gallerySection" id = "gal2">
+        <div class="title">
+          <h4>ARTS</h4>
+        </div>
+        <p> SOVIET SCHOOL OF ARTS <br><br> AGNES ARTS CENTER <br><br> 3 TIME WINNER KINGSTON GENERAL HOSPITAL ART COMPETITION <br><br> KINGSTON PRIZE WINNER <br><br> 12 YEARS OF EXPERIENCE </p>
+      </div>
+
+
+    <!--------------FOOTER SECTION---------------->
+    <footer>
+      <div class="inspSection">
+        <input type="checkbox" id="inspButton" onchange="changeBackground()">
+        <label for="inspButton" class="inspLabel">
+          <h5>INSPIRATION</h5>
+        </label>
+      </div>
+
+      <img src="signature.png" alt="Denis Schedrin">
+
+      <div class="media">
+        <h5>MEDIA</h5>
+
+        <div class="mIcons">
+          <a href="https://www.instagram.com/dvslick/" target="_blank">
+            <i class="gg-instagram"></i>
+          </a>
+
+          <a href="mailto:24dschedrin@cpsd.us" target="_blank">
+            <i class="gg-mail"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </footer>
+  </main>
+  <label for="inspButton" class="inspLabel">
+    <div id="inspBg"></div>
+  </label>
+  
+  <div id="inspList">
+        <ul>
+          <li> <a href="https://dellavite.com/" target="_blank">Della Vite</a> </li>
+          <li> <a href="https://www.blloc.com/" target="_blank">Blloc</a> </li>
+          <li> <a href="https://www.rolls-roycemotorcars.com/" target="_blank">Rolls-Royce</a> </li>
+          <li> <a href="https://www.apple.com/ipad-air/" target="_blank">Apple</a> </li>
+          <li> <a href="https://www.mocanyc.org/calendar/" target="_blank">MoCA</a> </li>
+          <li> <a href="https://393westend.com/" target="_blank">393</a> </li>
+          <li> <a href="https://www.giampierobodino.com/en/high-jewellery/the-flow-of-lightness" target="_blank">giampiero bodino</a> </li>
+          <li> <a href="https://www.aman.com/" target="_blank">aman</a> </li>
+          <li> <a href="https://brandpad.io" target="_blank">brandpad</a> </li>
+          <li> <a href="https://www.chanandeayrs.com/" target="_blank">chandereayrs</a> </li>
+          <li> <a href="https://www.harrods.com/en-us/" target="_blank">harrods</a> </li>
+          <li> <a href="https://www.alterego-group.com/" target="_blank">alter ego</a> </li>
+        </ul>
+      </div>
+  
+</body>
+
+</html>
