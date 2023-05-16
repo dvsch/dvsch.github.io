@@ -160,6 +160,11 @@ nav {
   transform: scale(var(--ggs, 1))
 }
 
+.subLink{
+  font-size: 1.3rem;
+  margin-left: auto;
+}
+
 nav a {
   color: white;
   text-decoration: none;
