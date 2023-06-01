@@ -340,49 +340,118 @@ ul li {list-style: none;}
   opacity: 0;
   transition: 750ms;
 }
-
-
-
-.media {
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  padding-top: 0;
-  position: relative;
+#last{
+  padding-bottom: 100%;
 }
 
-.mIcons {
+
+/*add contact form, might need php but maybe can do it in js*/
+
+#contactButton{display:none;}
+.contactLabel {cursor: pointer;}
+
+#contactBg {
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0) 150%);
+  opacity: 0;
+  transition: 750ms;
+}
+
+#contactForm {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  transition: 1s;
+  height:100%;
+  width: 75%;
+  justify-content:center;
+  align-content: center;
+  z-index: 3;
+}
+
+
+#contactEmail{
+  background-color: rgba(255,255,255, .3);
+  border: none;
+  outline: none;
+
+  border-bottom: 3px solid #afafaf;
+  padding: 0.5rem;
+
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 200;
+  font-size: 1.618rem;
+  color:white;
+
+  width: 100%;
+}
+#contactEmail::placeholder{
+  color:#afafaf;
+}
+
+#contactMessage{
+  background-color: rgba(255,255,255, .3);
+  border: none;
+  outline: none;
+
+  border-bottom: 3px solid #afafaf;
+  padding: 0.5rem;
+  margin: 2rem 0;
+
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 200;
+  font-size: 1.618rem;
+  color:white;
+
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+#contactMessage::placeholder{
+  color:#afafaf;
+}
+
+#bottom{
+  width:100%;
   display: flex;
   flex-direction: row;
-  z-index: 1;
-  position: absolute;
-  margin-top: 3.5rem;
-  gap: 1.5rem;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 1.5rem;
 }
 
-.mIcons a {
-  text-decoration: none;
-  color: white;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.75);
-}
-
-.mIcons a:hover {
-  color: gray;
-  transition: 0.2s;
-}
-
-.gg-mail {
-  margin-top: 0.2rem;
-  --ggs: 1.5;
+#submitContact{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #ffffff;
+  margin-top: 2.5rem;
+  
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 200;
+  font-size: 1.618rem;
+  color:white;
+  cursor: pointer;
+  height: 3rem;
+  width: 10rem;
 }
 
 /***************FOOTER***************/
 
 
 /***************TYPESCALE STUFF***************/
-# a {
+a {
+  color:white;
   text-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .5), 0px 0px 20px #000000;
 }
 

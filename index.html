@@ -42,8 +42,8 @@
     <a href="#abt">about me</a>
     <a href="#skill">skills</a>
     <a href="#gal">extras</a>
-    <a href="#gal1" class = "subLink">edus</a>
-    <a href="#gal2" class = "subLink">arts</a>
+    <a href="#gal1">education</a>
+    <a href="#gal2">arts</a>
   </nav>
 
 
@@ -122,7 +122,7 @@
     <!--------------FOOTER SECTION---------------->
     <footer>
       <div class="inspSection">
-        <input type="checkbox" id="inspButton" onchange="changeBackground()">
+        <input type="checkbox" id="inspButton" onchange="showInsp()">
         <label for="inspButton" class="inspLabel">
           <h5>INSPIRATION</h5>
         </label>
@@ -130,25 +130,21 @@
 
       <a href="#start"><img src="signature.png" alt="Denis Schedrin"></a>
 
-      <div class="media">
-        <h5>MEDIA</h5>
-
-        <div class="mIcons">
-          <a href="https://www.instagram.com/dvslick/" target="_blank">
-            <i class="gg-instagram"></i>
-          </a>
-
-          <a href="mailto:24dschedrin@cpsd.us" target="_blank">
-            <i class="gg-mail"></i>
-          </a>
-        </div>
-
+      <div class="contactSection">
+        <input type="checkbox" id="contactButton" onchange="showContact()">
+        <label for="contactButton" class="contactLabel">
+          <h5>CONTACT ME</h5>
+          <!-- add contact form somewhere -->
+        </label>
       </div>
 
     </footer>
   </main>
   <label for="inspButton" class="inspLabel">
     <div id="inspBg"></div>
+  </label>
+  <label for="contactButton" class="contactLabel">
+    <div id="contactBg"></div>
   </label>
   
   <div id="inspList">
@@ -164,9 +160,27 @@
           <li> <a href="https://brandpad.io" target="_blank">brandpad</a> </li>
           <li> <a href="https://www.chanandeayrs.com/" target="_blank">chandereayrs</a> </li>
           <li> <a href="https://www.harrods.com/en-us/" target="_blank">harrods</a> </li>
-          <li> <a href="https://www.alterego-group.com/" target="_blank">alter ego</a> </li>
+          <li> <a href="https://www.alterego-group.com/" target="_blank" id="last">alter ego</a> </li>
         </ul>
       </div>
+
+  <form
+  action="https://formspree.io/f/mayzgynj"
+  method="POST"
+  id="contactForm"
+>
+  <label>
+    <input type="email" name="email" placeholder="EMAIL" id="contactEmail">
+  </label>
+  <label>
+    <textarea name="message" placeholder="MESSAGE" style="resize: none;" id="contactMessage"></textarea>
+  </label>
+  <!-- using formspree for now because i couldnt figure out php fast enough to code it on my own -->
+    <div id="bottom">
+  <button type="submit" id="submitContact">Send</button>
+      <h5>Powered by <a href="https://formspree.io/">formspree.</a></h5>
+    </div>
+</form>
   
 </body>
 
