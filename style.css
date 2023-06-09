@@ -26,7 +26,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  background-color: rgba(0, 0, 0, 0.3); 
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -79,7 +79,8 @@ video {
 
 #introText {
   z-index: 9;
-  position: absolute
+  position: absolute;
+  width: 50%;
 }
 
 /***************NAV BAR***************/
@@ -89,7 +90,7 @@ video {
 
 label #open,
 label #close {
-  z-index: 3;
+  z-index: 5;
   left: 2.5%;
   top: 5%;
   position: fixed;
@@ -160,7 +161,7 @@ nav {
   transform: scale(var(--ggs, 1))
 }
 
-.subLink{
+.subLink {
   font-size: 1.3rem;
   margin-left: auto;
 }
@@ -219,9 +220,9 @@ main ul li {
 }
 
 .title {
-  display: flex;
   width: 100%;
-  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /*make rating system later*/
@@ -230,11 +231,12 @@ main ul li {
 .gallerySection {
   display: flex;
   min-height: 100%;
+  width: 100%;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
-  margin: 0 10rem;
+  margin: 0 auto;
 }
 
 
@@ -242,20 +244,22 @@ main ul li {
   display: flex;
   align-content: start;
   flex-direction: column;
-  width: 56rem;
+  width: 100%;
 }
 
-#gal1, #gal2{
+#gal1,
+#gal2 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-content: center;
 }
+
 #gal1 .title,
-#gal2 .title{
-  width:fit-content;
-  height:fit-content;
-  margin:0;
+#gal2 .title {
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
 }
 
 /**********NOT ENOUGH TIME TO IMPLEMENT :(
@@ -286,22 +290,27 @@ footer {
   flex: 0 0;
 }
 
-#inspButton{display:none;}
-.inspLabel {cursor: pointer;}
+#inspButton {
+  display: none;
+}
+
+.inspLabel {
+  cursor: pointer;
+}
 
 /*moved the button function to js bcuz was taking too long to debug here*/
 
 #inspList {
   position: fixed;
   display: flex;
-  
+
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  
+
   transition: 1s;
-  height:100%;
-  justify-content:center;
+  height: 100%;
+  justify-content: center;
   align-content: center;
   z-index: 3;
   overflow-y: scroll;
@@ -312,20 +321,24 @@ footer {
   color: white;
   font-size: 1.618rem;
 }
+
 #inspList a:hover {
   text-decoration: underline;
 }
 
-ul li {list-style: none;}
+ul li {
+  list-style: none;
+}
 
-#inspList ul{
+#inspList ul {
   height: auto;
-  padding:0;
+  padding: 0;
   margin: 0 2rem;
 }
-#inspList ul li{
-  width:fit-content;
-  padding:0;
+
+#inspList ul li {
+  width: fit-content;
+  padding: 0;
   margin: 50% auto;
 }
 
@@ -336,19 +349,25 @@ ul li {list-style: none;}
   position: fixed;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0) 200%);
   opacity: 0;
   transition: 750ms;
 }
-#last{
+
+#last {
   padding-bottom: 100%;
 }
 
 
 /*add contact form, might need php but maybe can do it in js*/
 
-#contactButton{display:none;}
-.contactLabel {cursor: pointer;}
+#contactButton {
+  display: none;
+}
+
+.contactLabel {
+  cursor: pointer;
+}
 
 #contactBg {
   bottom: 0;
@@ -357,7 +376,7 @@ ul li {list-style: none;}
   position: fixed;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0) 150%);
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0) 200%);
   opacity: 0;
   transition: 750ms;
 }
@@ -366,22 +385,22 @@ ul li {list-style: none;}
   position: fixed;
   display: flex;
   flex-direction: column;
-  
-  top: 100%;
+
+  top: 200%;
   left: 50%;
   transform: translateX(-50%);
-  
+
   transition: 1s;
-  height:100%;
+  height: 20%;
   width: 75%;
-  justify-content:center;
+  justify-content: center;
   align-content: center;
-  z-index: 3;
+  z-index: 5;
 }
 
 
-#contactEmail{
-  background-color: rgba(255,255,255, .3);
+#contactEmail {
+  background-color: rgba(255, 255, 255, .3);
   border: none;
   outline: none;
 
@@ -391,16 +410,17 @@ ul li {list-style: none;}
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 200;
   font-size: 1.618rem;
-  color:white;
+  color: white;
 
   width: 100%;
 }
-#contactEmail::placeholder{
-  color:#afafaf;
+
+#contactEmail::placeholder {
+  color: #afafaf;
 }
 
-#contactMessage{
-  background-color: rgba(255,255,255, .3);
+#contactMessage {
+  background-color: rgba(255, 255, 255, .3);
   border: none;
   outline: none;
 
@@ -411,18 +431,19 @@ ul li {list-style: none;}
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 200;
   font-size: 1.618rem;
-  color:white;
+  color: white;
 
   width: 100%;
   height: 100%;
   overflow-y: scroll;
 }
-#contactMessage::placeholder{
-  color:#afafaf;
+
+#contactMessage::placeholder {
+  color: #afafaf;
 }
 
-#bottom{
-  width:100%;
+#bottom {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -430,17 +451,17 @@ ul li {list-style: none;}
   margin-top: 1.5rem;
 }
 
-#submitContact{
+#submitContact {
   background-color: transparent;
   border: none;
   outline: none;
   border-bottom: 3px solid #ffffff;
   margin-top: 2.5rem;
-  
+
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 200;
   font-size: 1.618rem;
-  color:white;
+  color: white;
   cursor: pointer;
   height: 3rem;
   width: 10rem;
@@ -451,7 +472,7 @@ ul li {list-style: none;}
 
 /***************TYPESCALE STUFF***************/
 a {
-  color:white;
+  color: white;
   text-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .5), 0px 0px 20px #000000;
 }
 
@@ -469,7 +490,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 3rem 0 1.38rem;
+  /*margin: 3rem 0 1.38rem;*/
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 200;
   line-height: 1.3;
@@ -477,28 +498,50 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 11.089rem;
+  font-size: clamp(4.209rem, -4.1147878787878795rem + 17.37575757575758vw, 11.089rem);
 }
 
 h2 {
-  font-size: 6.854rem;
+  font-size: clamp(3.157rem, -1.5954949494949502rem + 9.656565656565657vw, 6.854rem);
 }
 
 h3 {
-  font-size: 4.236rem;
+  font-size: clamp(2.369rem, -0.19733333333333358rem + 5.066666666666667vw, 4.236rem);
 }
 
 h4 {
-  font-size: 2.618rem;
+  font-size: clamp(1.777rem, 0.5356767676767676rem + 2.3797979797979796vw, 2.618rem);
 }
 
 h5 {
-  font-size: 1.618rem;
+  font-size: clamp(1.333rem, 0.879111111111111rem + 0.8444444444444449vw, 1.618rem);
 }
 
 small,
 .text_small {
-  font-size: 0.618rem;
+  font-size: clamp(0.75rem, 0.998050505050505rem + -0.43434343434343425vw, 0.833rem);
 }
 
 /***************TYPESCALE STUFF***************/
+
+/**responsive stuff**/
+
+@media (max-width: 767px) {
+  .dissapearMobile {
+    display: none;
+  }
+
+  #gal1, #gal2,
+  #gal1 .title,
+  #gal2 .title{
+    text-align: center;
+  }
+
+  .skillSection{
+    flex-direction: row;
+    margin-top: 50%;
+  }
+  .skillSection ul{
+    flex-direction: column;
+  }
+}

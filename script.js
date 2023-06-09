@@ -1,10 +1,10 @@
-window.onload=function() {
+window.onload = function() {
   console.log('loaded');
 };
 
 
 document.querySelector('.loadingScreen').addEventListener('animationend', function() {
-  document.getElementById('load').remove();  
+  document.getElementById('load').remove();
   document.querySelector('body').style.top = '0px';
   document.querySelector('body').style.left = '0px';
   document.querySelector('body').style.width = '100%';
@@ -29,11 +29,14 @@ function showInsp() {
 function showContact() {
   //add a contact form and make it scroll in slower than bg
   if (document.getElementById('contactButton').checked) {
-    document.getElementById('contactForm').style.top = 0;
+    document.getElementById('contactForm').style.top = '40%';
+    //document.getElementById('contactForm').style.transform = 'translateY(-50%)';
+
     document.getElementById('contactBg').style.opacity = 1;
-    document.getElementById('contactBg').style.zIndex = 2;
+    document.getElementById('contactBg').style.zIndex = 4;
   } else {
-    document.getElementById('contactForm').style.top = '100%';
+    document.getElementById('contactForm').style.top = '200%';
+
     document.getElementById('contactBg').style.opacity = 0;
     document.getElementById('contactBg').style.zIndex = -2;
   }
